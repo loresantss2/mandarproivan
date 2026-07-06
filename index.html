@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fazenda do Vale | Compra e Venda de Vacas</title>
+    <meta
+      name="description"
+      content="Explore o melhor catálogo de vacas da Fazenda do Vale com busca, filtros e carrinho funcional."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a href="#home" class="brand" aria-label="Ir para o início">
+          <span class="brand-icon">🐄</span>
+          <div>
+            <strong>Fazenda do Vale</strong>
+            <span>Gado de qualidade</span>
+          </div>
+        </a>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="#home">Início</a>
+          <a href="#catalogo">Catálogo</a>
+          <a href="#carrinho">Carrinho <span class="cart-counter" aria-live="polite">0</span></a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-copy">
+            <p class="eyebrow">Seleção premium de vacas</p>
+            <h1>Encontre a fêmea ideal para sua fazenda.</h1>
+            <p>
+              Oferecemos animais com excelente genética, ótimo desempenho e produção de leite de alto padrão.
+            </p>
+            <a href="#catalogo" class="btn btn-primary">Comprar Agora</a>
+          </div>
+          <div class="hero-media">
+            <img
+              src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1000&q=80"
+              alt="Vacas em uma fazenda com campo verde"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalogo">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Catálogo</p>
+              <h2>Escolha a vaca certa para o seu rebanho</h2>
+            </div>
+            <p class="section-description">
+              Busque por nome ou raça e filtre por preço e produção de leite.
+            </p>
+          </div>
+
+          <div class="controls-panel">
+            <label class="control-group">
+              <span>Busca</span>
+              <input type="search" id="searchInput" placeholder="Buscar por nome ou raça" />
+            </label>
+            <label class="control-group">
+              <span>Raça</span>
+              <select id="raceFilter">
+                <option value="Todas">Todas</option>
+                <option value="Holandesa">Holandesa</option>
+                <option value="Jersey">Jersey</option>
+                <option value="Nelore">Nelore</option>
+                <option value="Gir">Gir</option>
+                <option value="Angus">Angus</option>
+              </select>
+            </label>
+            <label class="control-group">
+              <span>Faixa de preço</span>
+              <select id="priceFilter">
+                <option value="Todas">Todas</option>
+                <option value="ate5000">Até R$ 5.000</option>
+                <option value="5000a10000">R$ 5.000–10.000</option>
+                <option value="acima10000">Acima de R$ 10.000</option>
+              </select>
+            </label>
+            <label class="control-group">
+              <span>Produção de leite</span>
+              <select id="milkFilter">
+                <option value="Todas">Todas</option>
+                <option value="ate20">Até 20 L/dia</option>
+                <option value="20a40">20–40 L/dia</option>
+                <option value="acima40">Acima de 40 L/dia</option>
+              </select>
+            </label>
+          </div>
+
+          <div id="catalogGrid" class="catalog-grid"></div>
+        </div>
+      </section>
+
+      <section class="cart-section" id="carrinho">
+        <div class="container cart-layout">
+          <div class="cart-summary-card">
+            <div class="section-heading compact">
+              <div>
+                <p class="eyebrow">Carrinho</p>
+                <h2>Resumo da sua compra</h2>
+              </div>
+            </div>
+            <div class="cart-summary">
+              <div>
+                <span>Itens</span>
+                <strong id="cartItemsCount">0</strong>
+              </div>
+              <div>
+                <span>Subtotal</span>
+                <strong id="subtotalValue">R$ 0,00</strong>
+              </div>
+              <div>
+                <span>Total</span>
+                <strong id="totalValue">R$ 0,00</strong>
+              </div>
+            </div>
+            <button class="btn btn-secondary btn-block" id="clearCartBtn">Limpar Carrinho</button>
+          </div>
+
+          <div class="cart-items-card">
+            <div id="cartItems" class="cart-items"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contato">
+      <div class="container footer-content">
+        <div>
+          <h3>Fazenda do Vale</h3>
+          <p>Estrada da Serra, 1200</p>
+        </div>
+        <div>
+          <p>📞 (11) 3333-5555</p>
+          <p>📧 contato@fazendadovale.com</p>
+        </div>
+        <div>
+          <p>📷 Instagram @fazendadovale</p>
+          <p>👍 Facebook /fazendadovale</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
